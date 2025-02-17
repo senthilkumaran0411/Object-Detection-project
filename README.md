@@ -1,4 +1,4 @@
-```{r}
+
 # Generate README.md for Object Detection Project
 readme_content <- """
 # Object Detection and Recognition using Mask R-CNN
@@ -23,7 +23,7 @@ This project implements object detection and instance segmentation using **Mask 
 ## Installation
 1. **Clone the Repository**
    ```
-   git clone https://github.com/yourusername/object-detection.git
+   git clone https://github.com/senthilkumaran0411/Object-Detection-project.git
    cd object-detection
    ```
 
@@ -73,36 +73,7 @@ object-detection/
 ### 1. Web Interface
 - Upload an image, and the detected objects will be displayed with bounding boxes and masks.
 
-### 2. API Endpoints
-#### Upload an Image
-- **Endpoint**: `POST /detect`
-- **Request**:
-  ```
-  curl -X POST -F "image=@image.jpg" http://127.0.0.1:5000/detect
-  ```
-- **Response**:
-  ```json
-  {
-    "image_id": "65f8a9d...",
-    "objects_detected": [
-      {"label": "person", "confidence": 0.98, "bounding_box": [34, 60, 200, 350]},
-      {"label": "car", "confidence": 0.95, "bounding_box": [100, 150, 400, 600]}
-    ]
-  }
-  ```
 
-#### Retrieve Results
-- **Endpoint**: `GET /results/<image_id>`
-- **Response**:
-  ```json
-  {
-    "image_id": "65f8a9d...",
-    "objects_detected": [
-      {"label": "person", "confidence": 0.98},
-      {"label": "car", "confidence": 0.95}
-    ]
-  }
-  ```
 
 ## Model Details
 - **Architecture**: Mask R-CNN (based on Faster R-CNN)
@@ -110,17 +81,6 @@ object-detection/
 - **Dataset Used**: COCO Dataset (Common Objects in Context)
 - **Training**: Fine-tuned on a custom dataset using transfer learning.
 
-## Results & Performance
-- Achieved **mAP (mean Average Precision) of 0.85** on the validation set.
-- Successfully detects multiple objects per image with **instance segmentation masks**.
-- Performs real-time inference with an optimized model.
-
-## Deployment
-### 1. Using Docker
-```
-docker build -t object-detection .
-docker run -p 5000:5000 object-detection
-```
 
 ### 2. Deploying to Cloud
 - Can be deployed to **Heroku, AWS, or Google Cloud**.
@@ -132,9 +92,8 @@ docker run -p 5000:5000 object-detection
 - Integration with **mobile applications**.
 
 ## Contributors
-- **Your Name** - your.email@domain.com
+- **Your Name** - senthilkumaran0411@gmail.com
 - Open to contributions! Feel free to submit a PR.
-"""
 
 # Write content to README.md
 writeLines(readme_content, "README.md")
