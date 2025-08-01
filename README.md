@@ -1,5 +1,4 @@
 
-# Generate README.md for Object Detection Project
 readme_content <- """
 # Object Detection and Recognition using Mask R-CNN
 
